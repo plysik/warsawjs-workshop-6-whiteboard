@@ -13,7 +13,7 @@ Template.rooms.helpers({
 });
 
 Template.rooms.events({
-    'submit .info-link-add' (event) {
+    'submit .add-room' (event) {
         event.preventDefault();
 
         const target = event.target;
