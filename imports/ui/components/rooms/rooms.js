@@ -27,7 +27,7 @@ Template.rooms.events({
             }
         });
     },
-    'click .info-room-remove' (event, instance) {
+    'click .remove-room' (event, instance) {
         event.preventDefault();
         //console.log(this._id);
         Meteor.call('rooms.removeById', this._id, (error) => {
