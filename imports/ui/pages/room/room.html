@@ -1,3 +1,29 @@
 <template name="App_room">
-ROOM
+    {{#let title = room.title _id = room._id}}
+        <h1>
+            {{title}} <small> - {{_id}} </small>
+        </h1>
+    {{/let}}
+    <span><a href="{{pathFor 'App.home'}}">BACK</a></span>
+    <div id='drawPanel'>
+        <div id='controls'>
+            <div class="colors">
+            {{#each colors}}
+                <div class="color">
+                    <input type="radio" name="colors" id="{{this}}" value="{{this}}"/>
+                    <label for="{{this}}" class="{{this}}"></label>
+                </div>
+            {{/each}}
+            </div>
+            <div class="sizeControl">
+                <input type="text" id="tbSize" value="2">
+                <input type="range" id="rngSize" value="2">
+            </div>   
+            <div class="clear">
+                <button type="submit" id="btnClear">WYCZYŚĆ</button>
+            </div>     
+        </div>
+
+        <canvas id="canvas" width='1200' height="800"></canvas>
+    </div>
 </template>

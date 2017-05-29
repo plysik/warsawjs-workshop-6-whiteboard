@@ -1,0 +1,71 @@
+canvas {
+    border: 4px red solid;
+    /*width: 100%;*/
+    box-sizing: border-box;
+    /*height: auto;*/
+    cursor: crosshair;
+}
+
+#controls>div {
+    float: left;
+    margin: 0 3px;
+}
+
+.color {
+    display: inline;
+}
+
+.color label {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+}
+
+.color label.red {
+    background-color: red;
+}
+
+.color label.blue {
+    background-color: blue;
+}
+
+.color label.yellow {
+    background-color: yellow;
+}
+
+.color label.green {
+    background-color: green;
+}
+
+.color input[type=radio]:checked+label {
+    border-width: 5px;
+}
+
+.color input[type=radio] {
+    display: none;
+}
+
+.sizeControl input {
+    float: left;
+}
+
+.sizeControl input[type='text'] {
+    width: 30px;
+}
+
+#sizer {
+    box-sizing: border-box;
+    border: 1px solid block;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background: red;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#sizer.visible {
+    display: block;
+}
